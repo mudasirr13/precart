@@ -1,0 +1,68 @@
+.main-home{
+border: 2px solid black;
+}
+.main-home ul{
+text-decoration: none;
+list-style: none;
+
+}
+.main-home ul li{
+    margin:6px 71px 34px -29px;
+    padding: 5px 21px 16px;
+    border: 1px solid black;
+}
+.added-products{
+   list-style: none;
+   padding: 2px 2px 2px;
+}
+.added-products li{
+    text-decoration: none;
+    border: 2px solid black;
+}
+.added-products li button{
+    color:#020202;
+    background-color:#6ec6e2;
+    border-radius: 10px;
+
+}
+.btn:hover{
+    background-color: rgb(20, 132, 230);
+}
+.btn :active{
+    background-color: #020202;
+    box-shadow: 0 5px #666;
+    transform: translate(4px);
+}
+.form label{
+display: flex;
+flex-direction: column;
+}
+.form input{
+    width: 50%;
+    padding: 5px 12px;;
+   
+    box-sizing: border-box;
+}
+.btn{
+    color:#020202;
+    background-color:#6ec6e2;
+    border-radius: 10px;
+    padding: 5px;
+}
+.cart ul {
+    text-decoration: none;
+    list-style: none;
+     border: 2px solid black; 
+     
+      
+  }
+
+.cart ul li{
+    padding: 10px 5px 5px;
+    margin:  10px -43px 16px;
+    border: 2px solid black;  
+}
+.cart li p{
+    padding: 11px 6px 6px 37px;;
+    margin: 10px 5px 5px -31px;;
+}

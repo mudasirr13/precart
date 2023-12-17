@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import { ProductProvider } from '../src/context/ProductContext';
+import Home from './components/Home';
+import AddProduct from './components/AddProduct';
+import Cart from './components/Cart';
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const handleNavigation = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ProductProvider>
+      <div>
+        <nav className='nav-bar'>
+          <a href="#home" onClick={() => handleNavigation('home')}>
+            Home
+          </a>{' '}
+          {' '}
+          <a href="#addproduct" onClick={() => handleNavigation('addproduct')}>
+            Add Product
+          </a>{' '}
+          {' '}
+          <a href="#cart" onClick={() => handleNavigation('cart')}>
+            Cart
+          </a>
+        </nav>
+        
+        <main>
+          {currentPage === 'home' && <Home />}
+          {currentPage === 'addproduct' && <AddProduct />}
+          {currentPage === 'cart' && <Cart />}
+        </main>
+      </div>
+    </ProductProvider>
   );
-}
+};
 
 export default App;
